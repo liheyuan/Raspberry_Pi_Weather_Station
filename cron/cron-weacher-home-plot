@@ -1,0 +1,3 @@
+#!/bin/bash
+DIR="path/to/weather/home"
+*/15 * * * * root  cd $DIR && sudo python ./plot.py > /dev/null 2>&1
