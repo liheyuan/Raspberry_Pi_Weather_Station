@@ -1,0 +1,10 @@
+#!/bin/bash
+LOCAL_DIR="/path/to/weather/home"
+PNG_DIR="./png"
+SSH_USER="user"
+SSH_PASSWORD="pass"
+SSH_HOST="xxx.com"
+SSH_PORT="22"
+SSH_DIR="/ssh/remote/path/for/web/server"
+
+*/20 * * * * root cd $LOCAL_DIR && sshpass -p $SSH_PASSWORD scp -o StrictHostKeyChecking=no -P$SSH_PORT `find $PNG_DIR -mtime 0 -type f` $SSH_USER@$SSH_HOST:$SSH_DIR > /dev/null 2>&1
