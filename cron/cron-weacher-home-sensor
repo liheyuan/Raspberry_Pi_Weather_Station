@@ -1,0 +1,3 @@
+#!/bin/bash
+DIR="/home/osmc/soft/weather_home"
+*/10 * * * * root  cd $DIR && sudo python ./sensor.py > /dev/null 2>&1
