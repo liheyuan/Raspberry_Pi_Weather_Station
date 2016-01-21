@@ -82,7 +82,7 @@ max_x = DAY_END
 # calculate x ticks
 ticks_list = []
 tmp_ts = DAY_BEGIN
-for i in xrange(0, 25, 2):
+for i in xrange(0, 25, 3):
     ticks_list.append(((tmp_ts + 3600 * i), "%s:00"%(i)))
     
 # set x & y axis limit
@@ -101,10 +101,10 @@ for e in anno_list:
     (x, y, isMax) = e
     if isMax:
         x_delta = 0
-        y_delta = 2.5
+        y_delta = 4.5
     else:
-        y_delta = -3
-        x_delta = 0
-    plt.annotate('%s' % y, xy = (x, y), xytext=(x + x_delta, y + y_delta), arrowprops=dict(facecolor='black', shrink=0.05))
+        y_delta = 0
+        x_delta = -5
+    plt.annotate('%s' % y, xy = (x, y), xytext=(x + x_delta, y + y_delta), arrowprops=dict(facecolor='black', shrink=0.15))
 #plt.show()
 plt.savefig(PNG_FILE)
