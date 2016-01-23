@@ -74,6 +74,9 @@ anno_list = []
 #anno_list.append((max_humi_x, max_humi, True))
 anno_list.append((min_temp_x, min_temp, False))
 anno_list.append((max_temp_x, max_temp, True))
+if len(temp_list) >= 1:
+    last_x, last_y = temp_list[-1]
+    anno_list.append((last_x, last_y, True))
 
 # calculate x min & max
 min_x = DAY_BEGIN
